@@ -11,7 +11,9 @@ router.get('/si', (req,res)=>{
 });
 
 router.get('/no/:mensaje', (req,res)=>{
-    res.send('/login/no/:mensaje');
+    let mensaje = req.params.mensaje
+    console.log(req.params.mensaje)
+    res.send(mensaje);
 });
 
 module.exports = router;
